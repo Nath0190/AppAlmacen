@@ -1,0 +1,6 @@
+export interface SessionMod{
+    idModulo:number;
+    permiso: number;
+    nombreModulo: string;
+
+}

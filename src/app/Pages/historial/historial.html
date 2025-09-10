@@ -1,0 +1,41 @@
+   
+<div class="card" style="width: 70%;margin: 50px auto">
+    <div class="col col-lg-5" style="margin: 20px;">
+        <h3>Historial</h3>
+        <br> 
+        <label for="estatus" class="form-label">Tipo Movimiento:</label>
+        <select class="form-select" aria-label="Default select example" id="selectMovimiento" (change)="obtenerSelect($event)">
+            <option selected>Tipo </option>
+            <option value="ENTRADA">ENTRADA</option>
+            <option value="SALIDA">SALIDA</option>
+            <option value="BAJA">BAJA</option>
+            <option value="ALTA">ALTA</option>
+        </select>
+    </div>
+    <div class="card-body">
+        <!--This is some text within a card body.-->
+        <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">TipoMovimiento</th> 
+                <th scope="col">Nombre</th>
+                <th scope="col">Fecha y Hora </th>
+            
+            </tr>
+        </thead>
+        <tbody >
+            @for (l of listadoHistorial(); track l.idUsuario) {
+                <tr>
+                    <th scope="row">{{l.tipoMovimiento}}</th>
+                    <td>{{l.nombreUsuario}}</td>
+                    <td>{{l.fechaModificacion}}</td>
+                </tr>
+            }@empty {
+                <tr>
+                    <td colspan="3">No hay Registros.</td>
+                </tr>
+            }
+        </tbody>
+        </table>
+    </div>
+</div>

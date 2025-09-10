@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="container-fluid">
+        <br>
+        <h3>Salida Producto</h3>
+        <hr>
+        <br>
+        <br>  
+        <form class="col col-lg-5" [formGroup]="formProducto" >
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Producto</label>
+                <input type="text" class="form-control" id="nombre" maxlength="100" formControlName="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="estatus" class="form-label">Estatus</label>
+                <select class="form-select" aria-label="Default select example" id="estatus" formControlName="estatus">
+                    <option value="1">ALTA</option>
+                    <option value="2">BAJA</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="cantidad" class="form-label">Cantidad Existente:</label>
+                <input type="number" class="form-control" id="cantidad" min="1" max="10000" formControlName="cantidad">
+            </div>
+            <div class="mb-3">
+                <label for="cantidad" class="form-label">Cantidad a salir:</label>
+                <input type="number" class="form-control" id="cantidadSalir" min="1" max="10000" formControlName="cantidadSalir">
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="precio" min="0" max="10000" step="0.1" formControlName="precio">
+            </div>
+
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+        </form>
+    </div>
+</div>

@@ -57,3 +57,23 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+## PARA EJECUTAR EL PROYECTO:
+
+--Descargar node.js desde la pagina : https://nodejs.org/es/download/
+
+--Verifica la instalación: Abre el Símbolo del Sistema (CMD), escribe node -v 
+
+
+
+
+## Para instalar angular en la versión mas reciente (v20).
+
+-- Abrir la ventana CMD y agregar el siguiente comando :npm install -g @angular/cli 
+
+
+--Abrir la carpeta del proyecto con visual studio o el editor de Texto de su agrado
+
+-- En la misma terminal abierta ejecuta ng serve o bien dentro de la terminal de visual studio.
+

@@ -1,0 +1,37 @@
+<div class="card" style="width: 70%;margin: 50px auto">
+
+  <h3>Salida de Producto</h3>  
+  <div class="card-body">
+    
+    <!--This is some text within a card body.-->
+    <table class="table" >
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">estatus</th>
+            <th scope="col">nombre</th>
+            <th scope="col">cantidad</th>
+            <th scope="col">precio</th>
+            <th scope="col">Accion</th>
+        </tr>
+    </thead>
+    
+    <tbody >
+        @for (l of listaInventario(); track l.idProducto) {
+            <tr>
+                <th scope="row">{{l.idProducto}}</th>
+                <td>{{l.estatus}}</td>
+                <td>{{l.nombre}}</td>
+                <td>{{l.cantidad}}</td>
+                <td>{{l.precio}}</td>
+                <td>
+                    <button type="button" class="btn btn-outline-warning" (click)="salidaProducto(l)"><i class="bi bi-dash-square"></i></button>
+                </td>
+            </tr>
+        }
+    </tbody>
+    </table>
+  </div>
+</div>
+
+
